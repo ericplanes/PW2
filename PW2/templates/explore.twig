@@ -1,0 +1,14 @@
+{% extends "base_in.twig" %}
+
+{% block title %}Explore | PixSalle{% endblock %}
+
+{% block content %}
+<h1>Explore</h1>
+{% for photo in photos %}
+    <div class = "col-sm-4 objetfit">
+        <img src="{{photo.img}}" alt="{{photo.author}}'s image"/>
+    </div>
+    By {{photo.author}}.
+    <br>
+{% endfor %}
+{% endblock %}
